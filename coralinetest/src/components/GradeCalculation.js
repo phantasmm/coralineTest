@@ -23,13 +23,14 @@ export class GradeCalculation extends Component {
         .then(response=>{
             // console.log(response)
             this.setState({
-                grade:response.data
+                grade:response.data,
+                errors:''
             })
         })
         .catch(error=>{
             console.log(error)
             this.setState({
-                errors:'Error retreiving data'
+                errors:'Please enter data'
             })
         })
     }
